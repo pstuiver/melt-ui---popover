@@ -10,8 +10,4 @@
 	label {
 		@apply w-[75px] text-sm text-neutral-700;
 	}
-
-	p {
-		@apply mb-2 font-medium text-neutral-900;
-	}
 }
