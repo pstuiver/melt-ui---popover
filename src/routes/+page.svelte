@@ -20,21 +20,18 @@ Voluptas possimus assumenda asperiores facilis iure magni impedit similique sequ
 <p class=" p-2"><span class="font-bold">$arrow</span> ={JSON.stringify($arrow)}</p>
 <p class=" p-2"><span class="font-bold">$close</span> ={JSON.stringify($close)}</p>
 
-<div>
-	<button type="button" {...$trigger} use:trigger aria-label="Update dimensions">
+<div class="flex flex-col ml-32 w-1/2 bg-pink-200">
+	<button class="text-right" type="button" {...$trigger} use:trigger aria-label="Update dimensions">
 		TEST
 		<span class="sr-only">Open Popover</span>
 	</button>
-
 	{#if $open}
-		<div {...$content} use:content transition:fade={{ duration: 100 }}>
+		<div  class="justify-start w-full" {...$content} use:content transition:fade={{ duration: 100 }}>
 			<!-- <div {...$arrow} style="width:var(--arrow-size, 12px);height:var(--arrow-size, 12px)"/> -->
 			<div>
-				<div>
 					{@html popoverInfoHTML.head}
-					<button {...close} use:close> X </button>
-				</div>
-				{@html popoverInfoHTML.body}
+					<button {...close} use:close>X</button>
+					{@html popoverInfoHTML.body}
 			</div>
 		</div>
 	{/if}
