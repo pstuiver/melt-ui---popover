@@ -1,13 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer components {
-	fieldset {
-		@apply flex items-center gap-5;
-	}
-
-	label {
-		@apply w-[75px] text-sm text-neutral-700;
-	}
-}
